@@ -1,6 +1,7 @@
 import { useFinance } from "../context/FinanceContext";
 import BudgetCard from "../components/BudgetCard";
 import { Wallet2, ArrowUpCircle, ArrowDownCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
   const { transactions } = useFinance();
@@ -87,9 +88,9 @@ export default function Dashboard() {
         {/* Quick Recent Transactions (Optional Extra for Dashboard) */}
         <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 flex flex-col justify-center items-center text-center">
           <p className="text-zinc-400 mb-2">Want to see all activities?</p>
-          <a href="/transactions" className="text-orange-500 font-medium hover:text-orange-400 transition-colors">
+          <Link to="/transactions" className="text-orange-500 font-medium hover:text-orange-400 transition-colors">
             View Transactions →
-          </a>
+          </Link>
         </div>
       </div>
       

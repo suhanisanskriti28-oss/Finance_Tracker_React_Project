@@ -31,7 +31,7 @@ function AppLayout() {
 function App() {
   return (
     <FinanceProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route element={<AppLayout />}>
