@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Outlet } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import TransactionList from "./pages/TransactionList";
@@ -31,7 +31,7 @@ function AppLayout() {
 function App() {
   return (
     <FinanceProvider>
-      <Router basename={import.meta.env.BASE_URL}>
+      <Router>
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route element={<AppLayout />}>
